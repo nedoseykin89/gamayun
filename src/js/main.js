@@ -6,7 +6,7 @@
 /// = lib/isotope.js
 
 //= bootstrap/util.js
-//= bootstrap/collapse.js
+///= bootstrap/collapse.js
 //= bootstrap/dropdown.js
 
 ///= bootstrap/alert.js
@@ -15,7 +15,7 @@
 //= bootstrap/modal.js
 ///= bootstrap/popover.js
 ///= bootstrap/scrollspy.js
-//= bootstrap/tab.js
+///= bootstrap/tab.js
 ///= bootstrap/toast.js
 ///= bootstrap/tooltip.js
 //= scripts.js
