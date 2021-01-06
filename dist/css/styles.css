@@ -5916,7 +5916,7 @@ a.text-dark:hover, a.text-dark:focus {
     left: 10%; } }
 
 @media screen and (max-width: 748px) {
-  .slider__dots {
+  .slider__dots li {
     display: none; } }
 
 * {
