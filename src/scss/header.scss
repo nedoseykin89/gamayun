@@ -1,0 +1,139 @@
+.flag::before {
+  content: "";
+  background-image: url(../img/flag.png);
+  width: 16px;
+  height: 12px;
+  position: absolute;
+  left: -20px;
+  bottom: 12px;
+}
+
+/////burger-menu//////////////
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-25px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(17px, -17px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(17px, 17px);
+}
+///////////////////////
+.navbar {
+  background-color: #363e49;
+}
+.bonus {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.search {
+  background-color: #525c66;
+  outline: none;
+  border: none;
+}
+.search:focus {
+  background-color: #525c66;
+  outline: none;
+  border: none;
+}
+.search::-webkit-input-placeholder {
+  color: #fff;
+}
+.basket {
+  position: relative;
+}
+.basket::before {
+  content: "1";
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  background-image: url(../img/el.png);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 23px;
+  top: 4px;
+}
+.contact__block--text {
+  font-size: 12px;
+}
+.contact__block--num {
+  font-size: 14px;
+}
+////////////////////////
+@media screen and (max-width: 1024px) {
+  header {
+    font-size: 0.8rem;
+  }
+  .dropdown {
+    display: none;
+  }
+  .form-control {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .stock {
+    display: none;
+  }
+}
+@media screen and (max-width: 646px) {
+  .contact__block {
+    display: none;
+  }
+  .phone {
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sign-in {
+    margin-top: 65px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .search {
+    font-size: 10px;
+  }
+  .bonus {
+    font-size: 14px;
+  }
+  .header-list {
+    padding-bottom: 15px;
+  }
+}

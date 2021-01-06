@@ -1,0 +1,212 @@
+/* Slider */
+.slider {
+    position: relative;
+}
+.slick-slider {
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: none;
+}
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+    display: table;
+
+    content: "";
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    outline: none;
+    border: none;
+    height: 100%;
+    min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+    float: right;
+}
+.slick-slide img {
+    display: block;
+    // padding: 0 30px;
+    margin-bottom: 50px;
+}
+.slick-slide.slick-loading img {
+    display: none;
+}
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+.slick-vertical .slick-slide {
+    display: block;
+
+    height: auto;
+}
+
+// .slick-dots {
+//     transform: rotate(-90deg);
+//     position: absolute;
+//     left: 47%;
+//     top: -20%;
+// }
+
+.next,
+.prev {
+    outline: none;
+    vertical-align: middle;
+    margin-top: 15px;
+    @media screen and (max-width: 648px) {
+        margin-bottom: 15px;
+    }
+}
+
+// .prev2 {
+//     position: absolute;
+//     left: 5%;
+//     top: 45%;
+//     z-index: 2;
+//     outline: none;
+//     @media screen and (max-width: 1300px) {
+//         left: 0;
+//     }
+//     @media screen and (max-width: 590px) {
+//         left: 5%;
+//     }
+// }
+// .next2 {
+//     position: absolute;
+//     right: 5%;
+//     top: 45%;
+//     z-index: 2;
+//     outline: none;
+//     @media screen and (max-width: 1300px) {
+//         right: 0;
+//     }
+//     @media screen and (max-width: 590px) {
+//         right: 5%;
+//     }
+// }
+
+// @media screen and (max-width: 590px) {
+//     .next3,
+//     .prev3 {
+//         width: 30px;
+//         height: 30px;
+//     }
+// }
+////////////////////
+.slider__dots {
+    position: absolute;
+   bottom: -10%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+    outline: none;
+
+    li {
+        display: inline-block;
+        margin: 5px;
+        button {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            padding: 7px;
+            border: 2px solid #6bae67;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            font-size: 0;
+            outline: none;
+
+            @include hover {
+                padding: 7px;
+                border: 2px solid #6bae67;
+                cursor: pointer;
+            }
+        }
+        &.slick-active button {
+            background-image: url(../img/dot.png);
+            outline: none;
+            
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    .slider__dots {
+         bottom: -16%;
+         left: 16%;
+    }
+   }
+   @media screen and (max-width:768px) {
+    .slider__dots {
+        bottom: -40%;
+        left: 10%;
+    }
+   }
+   @media screen and (max-width:748px) {
+    .slider__dots {
+        display: none;
+    }
+   }

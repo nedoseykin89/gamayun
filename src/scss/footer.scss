@@ -1,0 +1,60 @@
+@import "bootstrap/bootstrap";
+@import "mixins";
+
+.footer-nav a {
+    color: #777777;
+}
+.footer-nav a:hover {
+    color: #ff9700;
+}
+
+.up {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 12px;
+}
+.socials {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        font-size: 20px;
+        margin: 15px 10px;
+        text-align: center;
+    }
+    &__link {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        color: #000;
+        background-color: #ebebeb;
+        border-radius: 50%;
+        border: 1px solid #000;
+        line-height: 32px;
+        @include hover {
+            transform: scale(1.3);
+        }
+    }
+}
+.authors a:hover {
+    color: #ff9700;
+}
+
+@media screen and (max-width: 646px) {
+    .footer-nav-text {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+    .authors {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.f-img {
+    max-width: 30px;
+}
